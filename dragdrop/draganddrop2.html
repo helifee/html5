@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Drag and Drop</title>
+<style type="text/css">
+#div1,#div2{float:left;width:500px;height:80px;margin:10px;padding:10px;border:1px solid #aaaaaa}
+</style>
+<script type="text/javascript">
+function drag(evt) {
+	evt.dataTransfer.setData("Text", evt.target.id);
+}
+
+function drop(evt) {
+	//evt.preventDefault();
+	var data = evt.dataTransfer.getData("Text");
+	evt.target.appendChild(document.getElementById(data));
+}
+function allowDrop(evt) {
+	evt.preventDefault();
+}
+</script>
+</head>
+<body>
+<p>请把图片拖到矩形中</p>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+<img id="drag1" src="../resource/w3school_banner.gif" draggable="true" 
+ondragstart="drag(event)"/>
+</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+</html>
