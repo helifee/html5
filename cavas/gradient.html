@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Gradient Demo</title>
+<script type="text/javascript">
+window.onload = function() {
+	var canvas1 = document.getElementById("canvas1");
+	var cxt = canvas1.getContext("2d");
+	var grd=cxt.createLinearGradient(0,0,175,50);
+	grd.addColorStop(0,"#FF0000");
+	grd.addColorStop(1,"#00FF00");
+	cxt.fillStyle=grd;
+	cxt.fillRect(0,0,175,50);
+}
+</script>
+</head>
+<body>
+<canvas id="canvas1" width="200", height="100" style="border:1px solid #c3c3c3"></canvas>
+</body>
+</html>

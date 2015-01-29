@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Line Demo</title>
+<script type="text/javascript">
+window.onload = function() {
+	var canvas1 = document.getElementById("canvas1");
+	var cxt = canvas1.getContext("2d");
+	cxt.moveTo(10,10);
+	cxt.lineTo(150, 80);
+	cxt.lineTo(10, 80);
+	cxt.stroke();
+}
+</script>
+</head>
+<body>
+<canvas id="canvas1" width="200", height="100" style="border:1px solid #c3c3c3"></canvas>
+</body>
+</html>
