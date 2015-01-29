@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Video Tag</title>
+</head>
+<body>
+<video width="320" height="240" controls="controls" preload="meta">
+	<source src="resource/movie.ogg" type="video/ogg">
+	<source src="resource/movie.mp4" type="video/mp4">
+	<!--
+	1,只支持ogg,mp4,webm 
+	2,其他属性：autoplay="autoplay" loop="loop"
+	3,preload取值：
+	auto - 当页面加载后载入整个视频
+	meta - 当页面加载后只载入元数据 这个选项的值将告诉服务端，用户依然不想马上加载音频，但需要预先获得音频的元数据信息(比如文件的大小，时长等)。如果开发者是在设计音频播放器或者需要获得音频的信息而不需要马上播放视频，则可以使用这个选项。
+	none - 当页面加载后不载入视频
+	-->
+	Your browser does not support video tag.
+</video>
+</body>
+</html>
