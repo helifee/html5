@@ -5,24 +5,22 @@
 <button onclick="getLocation()">йтр╩об</button>
 <script>
 var x=document.getElementById("demo");
+console.log("haha");
 function getLocation()
   {
   if (navigator.geolocation)
     {
-    navigator.geolocation.getCurrentPosition(showPosition);
+    navigator.geolocation.getCurrentPosition(foundPosition, noPosition);
     }
   else{x.innerHTML="Geolocation is not supported by this browser.";}
   }
-function showPosition(position)
+function foundPosition(position)
   {
   x.innerHTML="Latitude: " + position.coords.latitude + 
   "<br />Longitude: " + position.coords.longitude;	
   }
-  http://javascript.ruanyifeng.com/htmlapi/canvas.html
-  http://www.cnblogs.com/babyisun/p/4054707.html
-  http://www.html5tricks.com/
-  http://www.waylau.com/svg-using-external-image/
-  http://www.w3school.com.cn/html5/html_5_geolocation.asp
+  
+function noPosition() {}
 </script>
 </body>
 </html>
